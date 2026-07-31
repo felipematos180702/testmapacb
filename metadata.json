@@ -1,0 +1,6 @@
+{
+  "name": "O MAPA CB - Carla Borges",
+  "description": "Landing page oficial do treinamento O MAPA CB: O caminho pra viver da Internet, por Carla Borges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
