@@ -66,42 +66,24 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onOpenCheckout }) => {
             <div
               key={`${item.id}-${idx}`}
               onClick={() => setActiveTestimonial(item)}
-              className="w-[300px] sm:w-[350px] shrink-0 bg-[#0A0A0A] border border-[#262626] hover:border-[#E8A838]/70 rounded-2xl p-5 relative group transition-all duration-300 cursor-pointer shadow-2xl flex flex-col justify-between space-y-4"
+              className="w-[250px] sm:w-[350px] shrink-0 bg-[#0A0A0A] border border-[#262626] hover:border-[#E8A838]/70 rounded-2xl p-3.5 sm:p-5 relative group transition-all duration-300 cursor-pointer shadow-2xl flex flex-col justify-between space-y-3 sm:space-y-4"
             >
-              {/* Card Header: User Info & Platform Icon */}
-              <div className="flex items-center justify-between pb-3 border-b border-[#262626]">
-                <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <img
-                      src={item.avatar}
-                      alt={item.name}
-                      className="w-11 h-11 rounded-full object-cover ring-2 ring-[#E8A838]/40"
-                      referrerPolicy="no-referrer"
-                    />
-                    <span className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#141414] border border-[#262626] flex items-center justify-center text-[10px]">
-                      {item.platform === 'whatsapp' ? (
-                        <MessageCircle className="w-3 h-3 text-emerald-400 fill-emerald-400/20" />
-                      ) : (
-                        <Instagram className="w-3 h-3 text-pink-400" />
-                      )}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <h3 className="font-bold text-sm text-white">{item.name}</h3>
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#E8A838]" />
-                    </div>
-                    <p className="text-[11px] text-[#9C7A5B]">{item.handle}</p>
+              {/* Card Header: User Info */}
+              <div className="flex items-center justify-between pb-2.5 sm:pb-3 border-b border-[#262626]">
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <h3 className="font-bold text-xs sm:text-sm text-white">{item.name}</h3>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#E8A838]" />
                   </div>
                 </div>
 
-                <span className="text-[10px] text-[#9C7A5B] bg-[#141414] px-2.5 py-1 rounded-md border border-[#262626]">
+                <span className="text-[10px] text-[#9C7A5B] bg-[#141414] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md border border-[#262626]">
                   {item.timeAgo}
                 </span>
               </div>
 
               {/* Message Body - Print Style */}
-              <div className="bg-[#141414] p-4 rounded-xl border border-[#262626] space-y-3 relative overflow-hidden">
+              <div className="bg-[#141414] p-3 sm:p-4 rounded-xl border border-[#262626] space-y-2 sm:space-y-3 relative overflow-hidden">
                 <div className="flex items-center text-[#FFD000] gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-[#FFD000] text-[#FFD000]" />
@@ -171,17 +153,9 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onOpenCheckout }) => {
               ✕
             </button>
 
-            <div className="flex items-center gap-3">
-              <img
-                src={activeTestimonial.avatar}
-                alt={activeTestimonial.name}
-                className="w-14 h-14 rounded-full object-cover ring-2 ring-[#E8A838]"
-                referrerPolicy="no-referrer"
-              />
-              <div>
-                <h3 className="font-bold text-lg text-white">{activeTestimonial.name}</h3>
-                <p className="text-xs text-[#E8A838]">{activeTestimonial.handle} • {activeTestimonial.role}</p>
-              </div>
+            <div>
+              <h3 className="font-bold text-lg text-white">{activeTestimonial.name}</h3>
+              <p className="text-xs text-[#E8A838]">{activeTestimonial.role}</p>
             </div>
 
             {/* Print Screenshot Container */}

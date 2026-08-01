@@ -42,15 +42,15 @@ export const ProducerBio: React.FC<ProducerBioProps> = ({ onOpenCheckout }) => {
               <div className="absolute -inset-2 bg-gradient-to-tr from-[#E8A838]/30 via-[#9C7A5B]/20 to-[#FFD000]/30 rounded-3xl blur-xl"></div>
 
               <div className="relative bg-[#141414] border border-[#262626] rounded-3xl p-4 shadow-2xl">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#0A0A0A] border border-[#262626] relative flex flex-col items-center justify-center p-6 text-center">
-                  <div className="w-16 h-16 rounded-full bg-[#1A1A1A] border border-[#E8A838]/30 flex items-center justify-center mb-3">
-                    <Sparkles className="w-8 h-8 text-[#E8A838]/60" />
-                  </div>
-                  <p className="text-xs font-medium text-[#A3A3A3] max-w-[180px]">
-                    Espaço reservado para a foto de Carla Borges
-                  </p>
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[#0A0A0A] border border-[#262626] relative">
+                  <img
+                    src="https://drive.google.com/thumbnail?id=1v109OnfhMGAJs2LJbP65nCamJ4cv8NVP&sz=w1000"
+                    alt="Carla Borges"
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
                   
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent pointer-events-none"></div>
 
                   <div className="absolute bottom-4 left-4 right-4 bg-[#0A0A0A]/90 backdrop-blur-md p-3.5 rounded-xl border border-[#E8A838]/30 text-left">
                     <p className="font-sans text-base font-bold text-[#E8A838]">Carla Borges</p>
@@ -128,7 +128,7 @@ export const ProducerBio: React.FC<ProducerBioProps> = ({ onOpenCheckout }) => {
             <div className="pt-4">
               <button
                 onClick={scrollToOffer}
-                className="btn-gold-glow px-8 py-3.5 rounded-full font-bold text-sm tracking-wide inline-flex items-center gap-2 cursor-pointer"
+                className="btn-gold-glow px-5 py-2.5 sm:px-8 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide inline-flex items-center gap-2 cursor-pointer"
               >
                 <span>QUERO SER GUIADA PELA CARLA BORGES</span>
                 <ArrowRight className="w-4 h-4 text-[#0A0A0A]" />

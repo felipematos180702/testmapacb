@@ -71,7 +71,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
           className="relative rounded-3xl p-1 bg-gradient-to-b from-[#E8A838] via-[#9C7A5B]/40 to-[#262626] shadow-[0_0_50px_rgba(232,168,56,0.2)]"
         >
           
-          <div className="bg-[#141414] rounded-[22px] p-6 sm:p-10 lg:p-12 space-y-10">
+          <div className="bg-[#141414] rounded-[22px] p-4 sm:p-10 lg:p-12 space-y-6 sm:space-y-10">
             
             {/* Header / Title */}
             <div className="text-center space-y-3">
@@ -88,7 +88,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
             </div>
 
             {/* Grid Layout: Features List & Price Box */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
               
               {/* Left Column: What's Included */}
               <div className="lg:col-span-7 space-y-4">
@@ -112,10 +112,10 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
               </div>
 
               {/* Right Column: Pricing Box & CTA */}
-              <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-6 sm:p-8 text-center space-y-6 shadow-2xl relative">
+              <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-4 sm:p-8 text-center space-y-4 sm:space-y-6 shadow-2xl relative">
                 
                 {/* Course Image Mockup Thumbnail */}
-                <div className="rounded-xl overflow-hidden border border-[#262626] aspect-video mb-4 relative">
+                <div className="rounded-xl overflow-hidden border border-[#262626] aspect-video mb-3 sm:mb-4 relative">
                   <img
                     src={mockupImg}
                     alt="Treinamento O MAPA CB"
@@ -143,7 +143,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
 
                 <button
                   onClick={onOpenCheckout}
-                  className="btn-gold-glow w-full py-3 px-4 rounded-xl font-bold text-sm tracking-wide flex items-center justify-center gap-2 cursor-pointer shadow-xl group"
+                  className="btn-gold-glow w-full py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl font-bold text-xs sm:text-sm tracking-wide flex items-center justify-center gap-2 cursor-pointer shadow-xl group"
                 >
                   <Zap className="w-4 h-4 text-[#0A0A0A] fill-[#0A0A0A]" />
                   <span>GARANTIR MINHA VAGA AGORA</span>

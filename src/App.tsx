@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { MarqueeBanner } from './components/MarqueeBanner';
+import { VslSection } from './components/VslSection';
 import { TargetAudience } from './components/TargetAudience';
 import { ModulesCarousel } from './components/ModulesCarousel';
 import { ProducerBio } from './components/ProducerBio';
@@ -31,8 +31,8 @@ export default function App() {
       {/* 1. HERO SECTION (Atenção) */}
       <Hero onOpenCheckout={handleOpenCheckout} />
 
-      {/* 3. CARROSSEL INFINITO MARQUEE #1 */}
-      <MarqueeBanner />
+      {/* VSL SECTION (Vídeo de Apresentação) */}
+      <VslSection onOpenCheckout={handleOpenCheckout} />
 
       {/* 4. SEÇÃO "PRA QUEM É" (Interesse) */}
       <TargetAudience onOpenCheckout={handleOpenCheckout} />

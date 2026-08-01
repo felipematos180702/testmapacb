@@ -77,10 +77,10 @@ export const ModulesCarousel: React.FC = () => {
             <div
               key={module.id}
               onClick={() => setSelectedModule(module)}
-              className="snap-start flex-none w-[300px] sm:w-[340px] bg-[#0A0A0A] border border-[#262626] rounded-2xl overflow-hidden hover:border-[#E8A838]/60 transition-all duration-300 group cursor-pointer shadow-xl flex flex-col justify-between"
+              className="snap-start flex-none w-[260px] sm:w-[340px] bg-[#0A0A0A] border border-[#262626] rounded-2xl overflow-hidden hover:border-[#E8A838]/60 transition-all duration-300 group cursor-pointer shadow-xl flex flex-col justify-between"
             >
               {/* Module Cover Image Container */}
-              <div className="relative h-44 w-full overflow-hidden bg-[#141414]">
+              <div className="relative h-36 sm:h-44 w-full overflow-hidden bg-[#141414]">
                 <img
                   src={module.imageBg}
                   alt={module.title}
@@ -108,7 +108,7 @@ export const ModulesCarousel: React.FC = () => {
               </div>
 
               {/* Module Info Content */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4">
                 <div>
                   <h3 className="text-lg font-bold text-white group-hover:text-[#E8A838] transition-colors leading-snug">
                     {module.title}
