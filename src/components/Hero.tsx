@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Star, Lock } from 'lucide-react';
 import { motion } from 'motion/react';
 import carlaPortraitImg from '../assets/images/carla_borges_portrait_1784979484506.jpg';
+import { MarqueeBanner } from './MarqueeBanner';
 
 interface HeroProps {
   onOpenCheckout: () => void;
@@ -26,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
   };
 
   return (
-    <section className="relative pt-14 sm:pt-20 lg:pt-12 pb-8 sm:pb-12 flex flex-col bg-[#0A0A0A]">
+    <section className="relative pt-14 sm:pt-20 lg:pt-12 pb-0 flex flex-col bg-[#0A0A0A]">
       {/* Glow background ambiance */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] lg:w-[750px] lg:h-[750px] bg-[#E8A838]/10 rounded-full blur-[140px] pointer-events-none"></div>
       <div className="absolute top-1/3 right-10 w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#FFD000]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -41,23 +42,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
             className="order-1 lg:order-2 lg:col-span-5 w-full flex flex-col items-center lg:items-end justify-end z-10 self-end mb-0 pt-2 lg:pt-0 h-auto"
           >
-            <div className="w-full max-w-xs sm:max-w-md lg:max-w-none mx-auto lg:mx-0 flex items-end justify-center lg:justify-end h-auto min-h-[260px] sm:min-h-[380px] lg:min-h-[500px] relative">
+            <div className="w-full max-w-xs sm:max-w-md lg:max-w-none mx-auto lg:mx-0 flex items-end justify-center lg:justify-end h-auto min-h-[320px] sm:min-h-[430px] lg:min-h-[500px] relative">
               
               {/* Subtle Ambient Radial Glow behind cutout */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-[#E8A838]/25 via-[#9C7A5B]/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
 
-              {/* Cutout Image Element with Smooth 30% Alpha Gradient Fade at Bottom */}
-              <div 
-                className="relative z-20 w-full flex justify-center lg:justify-end items-end leading-none h-auto"
-                style={{
-                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 100%)',
-                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 100%)',
-                }}
-              >
+              {/* Cutout Image Element */}
+              <div className="relative z-10 lg:z-20 w-full flex justify-center lg:justify-end items-end leading-none h-auto">
                 <img
                   src={activePhoto}
                   alt="Carla Borges - Criadora do MAPA CB"
-                  className="block align-bottom w-auto max-h-[290px] sm:max-h-[400px] lg:max-h-none lg:w-[175%] lg:max-w-none lg:translate-x-64 h-auto object-bottom drop-shadow-[0_20px_40px_rgba(232,168,56,0.25)] mb-0 transition-opacity duration-500"
+                  className="block align-bottom w-auto max-h-[360px] sm:max-h-[450px] lg:max-h-none lg:w-[175%] lg:max-w-none lg:translate-x-64 h-auto object-bottom drop-shadow-[0_20px_40px_rgba(232,168,56,0.25)] mb-0 transition-opacity duration-500 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] lg:[mask-image:none] lg:[-webkit-mask-image:none]"
                   referrerPolicy="no-referrer"
                   onError={() => {
                     if (imgSrc === DRIVE_CUTOUT_URL) {
@@ -69,7 +64,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
                 />
               </div>
 
-
             </div>
           </motion.div>
 
@@ -78,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-start space-y-4 lg:space-y-8 text-left relative z-30 -mt-10 sm:-mt-14 lg:mt-2 pt-0 lg:pt-14 pb-4 lg:pb-8"
+            className="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-start space-y-4 lg:space-y-8 text-left relative z-20 pt-1 sm:pt-4 lg:pt-14 pb-4 lg:pb-8 -mt-12 sm:-mt-16 lg:mt-2"
           >
             
             {/* Main Headline */}
@@ -155,6 +149,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
           </motion.div>
 
         </div>
+      </div>
+
+      {/* MarqueeBanner - rendered at the base of the hero section below CTA on mobile, and at the section base on desktop */}
+      <div className="w-full relative z-30 pt-4 sm:pt-6 lg:pt-0 -mt-0 lg:-mt-4">
+        <MarqueeBanner />
       </div>
     </section>
   );

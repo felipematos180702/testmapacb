@@ -38,11 +38,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCheckout }) => {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
         {/* Logo Left */}
         <a href="#" className="flex items-center gap-2 sm:gap-3 group shrink-0">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#E8A838] to-[#9C7A5B] p-[1px] flex items-center justify-center shadow-lg shadow-[#E8A838]/10 group-hover:shadow-[#FFD000]/25 transition-all">
-            <div className="w-full h-full bg-[#0A0A0A] rounded-[11px] flex items-center justify-center">
-              <span className="font-bold text-[#E8A838] text-sm sm:text-lg tracking-wider">CB</span>
-            </div>
-          </div>
           <div className="flex flex-col">
             <span className="font-extrabold text-sm sm:text-xl text-white tracking-widest gold-gradient-text leading-tight">
               O MAPA CB

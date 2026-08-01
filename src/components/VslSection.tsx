@@ -1,7 +1,6 @@
 import React from 'react';
 import { Play, Sparkles, ArrowRight, Volume2, ShieldCheck } from 'lucide-react';
 import { motion } from 'motion/react';
-import { MarqueeBanner } from './MarqueeBanner';
 
 interface VslSectionProps {
   onOpenCheckout?: () => void;
@@ -19,18 +18,6 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
         
         {/* Header Tag and Title */}
         <div className="text-center space-y-4 mb-8 sm:mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#141414] border border-[#E8A838]/30 shadow-lg"
-          >
-            <Sparkles className="w-4 h-4 text-[#FFD000]" />
-            <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#E8A838] uppercase">
-              Assista à Apresentação Exclusiva
-            </span>
-          </motion.div>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +70,12 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
             className="mt-8 text-center flex flex-col items-center justify-center gap-4"
           >
             <button
-              onClick={onOpenCheckout}
+              onClick={() => {
+                const element = document.getElementById('oferta');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-5 text-base sm:text-lg font-black uppercase tracking-wider text-black bg-gradient-to-r from-[#FFD000] via-[#E8A838] to-[#FFD000] bg-[length:200%_auto] rounded-2xl shadow-[0_10px_30px_rgba(232,168,56,0.4)] hover:shadow-[0_15px_40px_rgba(232,168,56,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
             >
               <span className="flex items-center gap-3">
@@ -106,11 +98,6 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
           </motion.div>
         )}
 
-      </div>
-
-      {/* Animated Marquee Banner below CTA */}
-      <div className="w-full relative z-30 pt-10 sm:pt-12">
-        <MarqueeBanner />
       </div>
     </section>
   );
