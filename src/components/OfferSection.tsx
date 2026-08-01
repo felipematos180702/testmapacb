@@ -7,7 +7,11 @@ interface OfferSectionProps {
   onOpenCheckout: () => void;
 }
 
+const CTA_IMAGE_URL = 'https://lh3.googleusercontent.com/d/1te25VUEcaBpRU6hN8_wLxtUCsxQMQ5vX';
+
 export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) => {
+  const [ctaImgSrc, setCtaImgSrc] = useState(CTA_IMAGE_URL);
+
   // Countdown Timer state (e.g. 14 minutes 59 seconds)
   const [timeLeft, setTimeLeft] = useState({ minutes: 14, seconds: 59 });
 
@@ -26,10 +30,6 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
   }, []);
 
   const features = [
-    "Acesso Completo ao Treinamento MAPA CB (Todos os Módulos)",
-    "Metodologia Passo a Passo para Renda no Digital sem Enrolação",
-    "Material Complementar, Cadernos de Atividades & Checklists",
-    "Acesso de 1 Ano Completo com Todas as Atualizações",
     "Comunidade Exclusiva de Alunas no Telegram / WhatsApp",
     "Suporte Direto para Dúvidas Durante Toda a Sua Jornada",
     "BÔNUS 1: Guia de Posicionamento Irresistível no Instagram",
@@ -94,7 +94,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
               <div className="lg:col-span-7 space-y-4">
                 <h3 className="text-lg font-bold text-white flex items-center gap-2 border-b border-[#262626] pb-3">
                   <Award className="w-5 h-5 text-[#E8A838]" />
-                  Tudo O Que Está Incluso No Seu Acesso:
+                  E você ainda terá acesso a:
                 </h3>
 
                 <ul className="space-y-3">
@@ -112,31 +112,38 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
               </div>
 
               {/* Right Column: Pricing Box & CTA */}
-              <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-4 sm:p-8 text-center space-y-4 sm:space-y-6 shadow-2xl relative">
+              <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-3.5 sm:p-8 text-center space-y-2.5 sm:space-y-6 shadow-2xl relative max-w-sm lg:max-w-none mx-auto w-full">
                 
                 {/* Course Image Mockup Thumbnail */}
-                <div className="rounded-xl overflow-hidden border border-[#262626] aspect-video mb-3 sm:mb-4 relative">
+                <div className="rounded-xl overflow-hidden border border-[#262626] aspect-video mb-2 sm:mb-4 max-h-32 sm:max-h-none relative">
                   <img
-                    src={mockupImg}
+                    src={ctaImgSrc}
                     alt="Treinamento O MAPA CB"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
+                    onError={() => {
+                      if (ctaImgSrc === CTA_IMAGE_URL) {
+                        setCtaImgSrc('https://drive.google.com/uc?export=view&id=1te25VUEcaBpRU6hN8_wLxtUCsxQMQ5vX');
+                      } else if (ctaImgSrc !== mockupImg) {
+                        setCtaImgSrc(mockupImg);
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
                 </div>
 
-                <div className="space-y-1">
-                  <p className="text-xs text-[#9C7A5B] line-through uppercase tracking-wider font-medium">
+                <div className="space-y-0.5 sm:space-y-1">
+                  <p className="text-[11px] sm:text-xs text-[#9C7A5B] line-through uppercase tracking-wider font-medium">
                     De R$ 997,00
                   </p>
-                  <p className="text-xs text-[#C2C2C2] font-medium">Por apenas 12x de</p>
+                  <p className="text-[11px] sm:text-xs text-[#C2C2C2] font-medium">Por apenas 12x de</p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-xl font-bold text-[#E8A838]">R$</span>
-                    <span className="font-sans text-4xl sm:text-5xl font-extrabold text-white gold-gradient-text">
+                    <span className="text-lg sm:text-xl font-bold text-[#E8A838]">R$</span>
+                    <span className="font-sans text-3xl sm:text-5xl font-extrabold text-white gold-gradient-text">
                       20,48
                     </span>
                   </div>
-                  <p className="text-xs text-[#C2C2C2] pt-1">
+                  <p className="text-[11px] sm:text-xs text-[#C2C2C2] pt-0.5 sm:pt-1">
                     ou <span className="text-white font-bold">R$ 198,00 à vista</span> no Pix ou Cartão
                   </p>
                 </div>

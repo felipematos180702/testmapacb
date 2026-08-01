@@ -97,24 +97,18 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onOpenCheckout }) => {
                 {/* Print Screenshot Badge / Placeholder Notice */}
                 {item.earningsBadge && (
                   <div className="pt-2 flex items-center justify-between border-t border-[#262626]/60">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#E8A838] bg-[#0A0A0A] px-2.5 py-1 rounded-full border border-[#E8A838]/30">
-                      <Sparkles className="w-3 h-3 text-[#FFD000]" />
+                    <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-bold text-[#E8A838] bg-[#0A0A0A] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-[#E8A838]/30">
+                      <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#FFD000]" />
                       {item.earningsBadge}
-                    </span>
-                    <span className="text-[10px] text-[#9C7A5B] flex items-center gap-1 group-hover:text-[#E8A838] transition-colors">
-                      <ZoomIn className="w-3 h-3" /> Ver Print
                     </span>
                   </div>
                 )}
               </div>
 
               {/* Verified Badge Footer */}
-              <div className="flex items-center justify-between text-[11px] text-[#9C7A5B] pt-1">
+              <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-[#9C7A5B] pt-1">
                 <span className="flex items-center gap-1 text-emerald-400 font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> Aluna do MAPA CB
-                </span>
-                <span className="text-[10px] text-[#E8A838] opacity-80 group-hover:opacity-100 transition-opacity">
-                  Clique para ampliar
+                  <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Aluna do MAPA CB
                 </span>
               </div>
 
@@ -161,7 +155,7 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onOpenCheckout }) => {
             {/* Print Screenshot Container */}
             <div className="bg-[#0A0A0A] p-5 rounded-2xl border border-[#262626] space-y-4">
               <div className="flex items-center justify-between text-xs text-[#9C7A5B] pb-2 border-b border-[#262626]">
-                <span>Print da conversa em {activeTestimonial.platform === 'whatsapp' ? 'WhatsApp' : 'Instagram Direct'}</span>
+                <span>Depoimento enviado via {activeTestimonial.platform === 'whatsapp' ? 'WhatsApp' : 'Instagram Direct'}</span>
                 <span>{activeTestimonial.timeAgo}</span>
               </div>
               <p className="text-sm text-white leading-relaxed font-sans">
