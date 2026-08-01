@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
             className="order-1 lg:order-2 lg:col-span-5 w-full flex flex-col items-center lg:items-end justify-end z-10 self-end mb-0 pt-2 lg:pt-0 h-auto"
           >
-            <div className="w-full max-w-xs sm:max-w-md lg:max-w-none mx-auto lg:mx-0 flex items-end justify-center lg:justify-end h-auto min-h-[320px] sm:min-h-[430px] lg:min-h-[500px] relative">
+            <div className="w-full max-w-sm sm:max-w-xl lg:max-w-none mx-auto lg:mx-0 flex items-end justify-center lg:justify-end h-auto min-h-[320px] sm:min-h-[430px] lg:min-h-[500px] relative">
               
               {/* Subtle Ambient Radial Glow behind cutout */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-[#E8A838]/25 via-[#9C7A5B]/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
