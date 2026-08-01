@@ -53,10 +53,10 @@ export const TargetAudience: React.FC<TargetAudienceProps> = ({ onOpenCheckout }
         
         {/* Header Title */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto space-y-4 mb-16"
         >
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#141414] px-4 py-1.5 rounded-full border border-[#262626]">
@@ -76,10 +76,10 @@ export const TargetAudience: React.FC<TargetAudienceProps> = ({ onOpenCheckout }
             return (
               <motion.div
                 key={card.id}
-                initial={{ opacity: 0, y: 35 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.12 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
                 className="card-dark-tactile p-4 sm:p-6 lg:p-8 flex flex-col justify-between relative group cursor-pointer border border-[#262626] bg-[#141414] rounded-2xl hover:border-[#E8A838]/50 transition-all duration-300"
               >
                 <div className="space-y-2 sm:space-y-3">

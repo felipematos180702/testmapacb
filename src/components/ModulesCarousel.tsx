@@ -26,10 +26,10 @@ export const ModulesCarousel: React.FC = () => {
         
         {/* Section Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
         >
           <div>
@@ -65,10 +65,10 @@ export const ModulesCarousel: React.FC = () => {
 
         {/* Horizontal Modules Slider */}
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto pb-8 pt-2 scrollbar-none scroll-smooth snap-x snap-mandatory"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}

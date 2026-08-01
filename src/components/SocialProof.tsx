@@ -29,10 +29,10 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onOpenCheckout }) => {
         
         {/* Header Title */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto space-y-4 mb-14"
         >
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#0A0A0A] px-4 py-1.5 rounded-full border border-[#262626]">
@@ -52,8 +52,8 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onOpenCheckout }) => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.7 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.5 }}
         className="relative w-full overflow-hidden py-4"
       >
         {/* Left & Right Gradient Shadows for seamless transition */}

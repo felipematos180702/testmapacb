@@ -16,10 +16,10 @@ export const FaqAccordion: React.FC = () => {
         
         {/* Section Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
           className="text-center space-y-4 mb-16"
         >
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#0A0A0A] px-4 py-1.5 rounded-full border border-[#262626]">
@@ -35,10 +35,10 @@ export const FaqAccordion: React.FC = () => {
 
         {/* Accordion Container */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="space-y-4"
         >
           {FAQ_DATA.map((item) => {

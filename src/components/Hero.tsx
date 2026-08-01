@@ -142,19 +142,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="lg:col-span-5 flex flex-col items-center lg:items-end justify-end z-10 self-end mb-0 pt-0 h-auto"
+            className="lg:col-span-5 flex flex-col items-center lg:items-end justify-end z-10 self-end mb-0 pt-0 h-auto min-h-[280px] sm:min-h-[420px] lg:min-h-[500px]"
           >
-            <div className="w-full max-w-xl lg:max-w-none mx-auto lg:mx-0 flex items-end justify-center lg:justify-end h-auto">
+            <div className="w-full max-w-xl lg:max-w-none mx-auto lg:mx-0 flex items-end justify-center lg:justify-end h-auto min-h-[280px] sm:min-h-[420px] lg:min-h-[500px] relative">
               
               {/* Subtle Ambient Radial Glow behind cutout */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-gradient-to-t from-[#E8A838]/30 via-[#9C7A5B]/15 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] bg-gradient-to-t from-[#E8A838]/25 via-[#9C7A5B]/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
 
               {/* Cutout Image Element */}
-              <div className="relative z-20 w-full flex justify-center lg:justify-end items-end leading-none h-auto">
+              <div className="relative z-20 w-full flex justify-center lg:justify-end items-end leading-none h-auto min-h-[280px] sm:min-h-[420px] lg:min-h-[500px]">
                 <img
                   src={activePhoto}
                   alt="Carla Borges - Criadora do MAPA CB"
-                  className="block align-bottom w-full sm:w-[130%] lg:w-[175%] max-w-xl sm:max-w-3xl lg:max-w-none lg:translate-x-64 h-auto object-bottom drop-shadow-[0_20px_40px_rgba(232,168,56,0.25)] mb-0"
+                  className="block align-bottom w-full sm:w-[130%] lg:w-[175%] max-w-xl sm:max-w-3xl lg:max-w-none lg:translate-x-64 h-auto object-bottom drop-shadow-[0_20px_40px_rgba(232,168,56,0.25)] mb-0 transition-opacity duration-500"
                   referrerPolicy="no-referrer"
                   onError={() => {
                     if (imgSrc === DRIVE_CUTOUT_URL) {

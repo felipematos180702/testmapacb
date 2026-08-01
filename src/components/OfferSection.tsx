@@ -64,10 +64,10 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
 
         {/* Main Offer Card Container */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.96, y: 30 }}
+          initial={{ opacity: 0, scale: 0.98, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.5 }}
           className="relative rounded-3xl p-1 bg-gradient-to-b from-[#E8A838] via-[#9C7A5B]/40 to-[#262626] shadow-[0_0_50px_rgba(232,168,56,0.2)]"
         >
           
@@ -112,26 +112,8 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
               </div>
 
               {/* Right Column: Pricing Box & CTA */}
-              <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-3.5 sm:p-8 text-center space-y-2.5 sm:space-y-6 shadow-2xl relative max-w-sm lg:max-w-none mx-auto w-full">
+              <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-4 sm:p-8 text-center space-y-3 sm:space-y-6 shadow-2xl relative max-w-sm lg:max-w-none mx-auto w-full">
                 
-                {/* Course Image Mockup Thumbnail */}
-                <div className="rounded-xl overflow-hidden border border-[#262626] aspect-video mb-2 sm:mb-4 max-h-32 sm:max-h-none relative">
-                  <img
-                    src={ctaImgSrc}
-                    alt="Treinamento O MAPA CB"
-                    className="w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
-                    onError={() => {
-                      if (ctaImgSrc === CTA_IMAGE_URL) {
-                        setCtaImgSrc('https://drive.google.com/uc?export=view&id=1te25VUEcaBpRU6hN8_wLxtUCsxQMQ5vX');
-                      } else if (ctaImgSrc !== mockupImg) {
-                        setCtaImgSrc(mockupImg);
-                      }
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent"></div>
-                </div>
-
                 <div className="space-y-0.5 sm:space-y-1">
                   <p className="text-[11px] sm:text-xs text-[#9C7A5B] line-through uppercase tracking-wider font-medium">
                     De R$ 997,00
@@ -157,7 +139,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
                   <ArrowRight className="w-4 h-4 text-[#0A0A0A] group-hover:translate-x-1 transition-transform" />
                 </button>
 
-                <div className="flex items-center justify-center gap-3 text-[11px] text-[#9C7A5B] pt-2">
+                <div className="flex items-center justify-center gap-3 text-[11px] text-[#9C7A5B] pt-1 sm:pt-2">
                   <span className="flex items-center gap-1">
                     <Lock className="w-3.5 h-3.5 text-emerald-400" /> Checkout Seguro
                   </span>
@@ -172,15 +154,15 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
             </div>
 
             {/* Guarantee Seal Box */}
-            <div className="pt-8 border-t border-[#262626] bg-[#0A0A0A] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#E8A838]/20 to-[#9C7A5B]/20 border border-[#E8A838]/40 flex items-center justify-center text-[#E8A838] shrink-0 shadow-lg">
-                <ShieldCheck className="w-10 h-10 text-[#FFD000]" />
+            <div className="mt-4 sm:mt-8 pt-4 sm:pt-8 border-t border-[#262626] bg-[#0A0A0A] rounded-xl sm:rounded-2xl p-3.5 sm:p-8 flex flex-row items-center gap-3 sm:gap-6 text-left">
+              <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#E8A838]/20 to-[#9C7A5B]/20 border border-[#E8A838]/40 flex items-center justify-center text-[#E8A838] shrink-0 shadow-lg">
+                <ShieldCheck className="w-6 h-6 sm:w-10 sm:h-10 text-[#FFD000]" />
               </div>
-              <div className="space-y-1 text-center sm:text-left">
-                <h4 className="text-lg font-bold text-white flex items-center justify-center sm:justify-start gap-2">
+              <div className="space-y-1">
+                <h4 className="text-xs sm:text-lg font-bold text-white flex items-center gap-2">
                   Garantia Incondicional de 7 Dias — Risco Zero!
                 </h4>
-                <p className="text-xs sm:text-sm text-[#C2C2C2] leading-relaxed">
+                <p className="text-[11px] sm:text-sm text-[#C2C2C2] leading-snug sm:leading-relaxed">
                   Experimente o MAPA CB por 7 dias inteiros. Assista aos módulos, acesse os materiais e teste a metodologia. Se por qualquer motivo você achar que não é para você, basta solicitar o reembolso e devolveremos 100% do seu investimento, sem burocracia.
                 </p>
               </div>

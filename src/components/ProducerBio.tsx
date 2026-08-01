@@ -30,10 +30,10 @@ export const ProducerBio: React.FC<ProducerBioProps> = ({ onOpenCheckout }) => {
           
           {/* Left: Carla's Portrait Frame */}
           <motion.div 
-            initial={{ opacity: 0, x: -35 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-5 relative"
           >
             <div className="relative max-w-sm mx-auto lg:max-w-none">
@@ -79,10 +79,10 @@ export const ProducerBio: React.FC<ProducerBioProps> = ({ onOpenCheckout }) => {
 
           {/* Right: Persuasive Bio Text */}
           <motion.div 
-            initial={{ opacity: 0, x: 35 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-7 space-y-6"
           >
             
