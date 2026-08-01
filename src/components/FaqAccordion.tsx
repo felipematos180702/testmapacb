@@ -55,7 +55,7 @@ export const FaqAccordion: React.FC = () => {
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-bold text-base sm:text-lg text-white flex items-center gap-3">
+                  <span className="font-bold text-sm sm:text-lg text-white flex items-center gap-3">
                     <HelpCircle className={`w-5 h-5 shrink-0 transition-colors ${isOpen ? 'text-[#E8A838]' : 'text-[#9C7A5B]'}`} />
                     {item.question}
                   </span>

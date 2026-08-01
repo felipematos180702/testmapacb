@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
                 <img
                   src={activePhoto}
                   alt="Carla Borges - Criadora do MAPA CB"
-                  className="block align-bottom w-auto max-h-[360px] sm:max-h-[450px] lg:max-h-none lg:w-[175%] lg:max-w-none lg:translate-x-64 h-auto object-bottom drop-shadow-[0_20px_40px_rgba(232,168,56,0.25)] mb-0 transition-opacity duration-500 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] lg:[mask-image:none] lg:[-webkit-mask-image:none]"
+                  className="block align-bottom w-auto max-h-[480px] sm:max-h-[580px] lg:max-h-none lg:w-[175%] lg:max-w-none lg:translate-x-64 -translate-y-16 sm:-translate-y-24 lg:translate-y-0 h-auto object-bottom drop-shadow-[0_20px_40px_rgba(232,168,56,0.25)] mb-0 transition-opacity duration-500 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] lg:[mask-image:none] lg:[-webkit-mask-image:none]"
                   referrerPolicy="no-referrer"
                   onError={() => {
                     if (imgSrc === DRIVE_CUTOUT_URL) {
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-start space-y-4 lg:space-y-8 text-left relative z-20 pt-1 sm:pt-4 lg:pt-14 pb-4 lg:pb-8 -mt-12 sm:-mt-16 lg:mt-2"
+            className="order-2 lg:order-1 lg:col-span-7 flex flex-col justify-start space-y-4 lg:space-y-8 text-left relative z-20 pt-1 sm:pt-4 lg:pt-14 pb-4 lg:pb-8 -mt-20 sm:-mt-28 lg:mt-2"
           >
             
             {/* Main Headline */}

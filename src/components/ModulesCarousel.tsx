@@ -33,10 +33,10 @@ export const ModulesCarousel: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
         >
           <div>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#0A0A0A] px-4 py-1.5 rounded-full border border-[#262626] mb-3">
+            <span className="inline-block text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#0A0A0A] px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-[#262626] mb-3">
               Conteúdo Programático Exclusivo
             </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white">
               Conheça as Rotas do Seu Mapa
             </h2>
             <p className="text-[#C2C2C2] text-sm sm:text-base mt-2 max-w-xl">

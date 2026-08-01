@@ -59,10 +59,10 @@ export const TargetAudience: React.FC<TargetAudienceProps> = ({ onOpenCheckout }
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto space-y-4 mb-16"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#141414] px-4 py-1.5 rounded-full border border-[#262626]">
+          <span className="inline-block text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#E8A838] bg-[#141414] px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-[#262626]">
             Sintomas de Quem Precisa do Mapa
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white">
             O MAPA CB é para você que...
           </h2>
           <p className="text-[#C2C2C2] text-sm sm:text-base leading-relaxed">

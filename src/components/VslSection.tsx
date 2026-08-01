@@ -24,7 +24,7 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-tight max-w-3xl mx-auto"
+            className="text-xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-tight max-w-3xl mx-auto"
           >
             Descubra Como Mudar de Vida no Digital com o <span className="bg-gradient-to-r from-[#FFD000] via-[#E8A838] to-[#9C7A5B] bg-clip-text text-transparent">MAPA CB</span>
           </motion.h2>
