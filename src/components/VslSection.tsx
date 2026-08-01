@@ -1,6 +1,7 @@
 import React from 'react';
 import { Play, Sparkles, ArrowRight, Volume2, ShieldCheck } from 'lucide-react';
 import { motion } from 'motion/react';
+import { MarqueeBanner } from './MarqueeBanner';
 
 interface VslSectionProps {
   onOpenCheckout?: () => void;
@@ -105,6 +106,11 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
           </motion.div>
         )}
 
+      </div>
+
+      {/* Animated Marquee Banner below CTA */}
+      <div className="w-full relative z-30 pt-10 sm:pt-12">
+        <MarqueeBanner />
       </div>
     </section>
   );
