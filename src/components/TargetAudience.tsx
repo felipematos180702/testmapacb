@@ -11,14 +11,14 @@ export const TargetAudience: React.FC<TargetAudienceProps> = ({ onOpenCheckout }
     {
       id: 1,
       icon: Compass,
-      title: "Iniciante no Digital",
+      title: "É iniciante no digital",
       description: "Quer criar uma fonte de renda no digital mas não sabe por onde começar.",
       tag: "Do Zero à Ação"
     },
     {
       id: 2,
       icon: Lightbulb,
-      title: "Cansada de Teoria Sem Fim",
+      title: "Está cansada de teoria sem fim",
       description: "Já tentou outros cursos genéricos e ficou perdida com tanta teoria sem aplicação prática.",
       tag: "Sem Enrolação"
     },
@@ -32,7 +32,7 @@ export const TargetAudience: React.FC<TargetAudienceProps> = ({ onOpenCheckout }
     {
       id: 4,
       icon: Heart,
-      title: "Visão Feminina",
+      title: "Quer uma visão feminina",
       description: "Quer um passo a passo estruturado e pensado para a realidade, rotina e desafios da mulher atual.",
       tag: "Método Feminino"
     }

@@ -126,11 +126,11 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
 
                 <button
                   onClick={onOpenCheckout}
-                  className="btn-gold-glow w-full py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl font-bold text-xs sm:text-sm tracking-wide flex items-center justify-center gap-2 cursor-pointer shadow-xl group"
+                  className="btn-gold-glow w-full max-w-[280px] sm:max-w-[320px] mx-auto py-2 sm:py-2.5 px-4 rounded-xl font-bold text-[11px] sm:text-xs tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-xl group"
                 >
-                  <Zap className="w-4 h-4 text-[#0A0A0A] fill-[#0A0A0A]" />
+                  <Zap className="w-3.5 h-3.5 text-[#0A0A0A] fill-[#0A0A0A]" />
                   <span>GARANTIR MINHA VAGA AGORA</span>
-                  <ArrowRight className="w-4 h-4 text-[#0A0A0A] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#0A0A0A] group-hover:translate-x-1 transition-transform" />
                 </button>
 
                 <div className="flex items-center justify-center gap-3 text-[11px] text-[#9C7A5B] pt-1 sm:pt-2">
