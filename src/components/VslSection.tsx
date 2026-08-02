@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Play, Sparkles, ArrowRight, Volume2, ShieldCheck } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 
 interface VslSectionProps {
   onOpenCheckout?: () => void;
 }
 
 export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
-  const vimeoEmbedUrl = "https://player.vimeo.com/video/1214834722?loop=1&title=0&byline=0&portrait=0&badge=0&autopause=0";
+  const [isPlaying, setIsPlaying] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  
+  // Base Vimeo URL with all brandings/controls hidden and API enabled
+  const vimeoEmbedUrl = "https://player.vimeo.com/video/1214834722?loop=1&title=0&byline=0&portrait=0&badge=0&autopause=0&controls=0&api=1";
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    if (iframeRef.current && iframeRef.current.contentWindow) {
+      iframeRef.current.contentWindow.postMessage(JSON.stringify({ method: 'play' }), '*');
+    }
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+    if (iframeRef.current && iframeRef.current.contentWindow) {
+      iframeRef.current.contentWindow.postMessage(JSON.stringify({ method: 'pause' }), '*');
+    }
+  };
 
   return (
     <section className="relative py-12 sm:py-16 lg:py-20 bg-[#0A0A0A] overflow-hidden">
@@ -24,21 +42,11 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl sm:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-tight max-w-3xl mx-auto"
+            className="text-xl sm:text-[47px] font-black text-white uppercase tracking-tight leading-tight max-w-3xl mx-auto"
           >
             Descubra Como Mudar de Vida no Digital com o <span className="bg-gradient-to-r from-[#FFD000] via-[#E8A838] to-[#9C7A5B] bg-clip-text text-transparent">MAPA CB</span>
           </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base text-[#C2C2C2] max-w-xl mx-auto flex items-center justify-center gap-2"
-          >
-            <Volume2 className="w-4 h-4 text-[#E8A838] shrink-0" />
-            Ligue o som e assista até o final para entender o método passo a passo.
-          </motion.p>
         </div>
 
         {/* Video Player Container */}
@@ -50,7 +58,42 @@ export const VslSection: React.FC<VslSectionProps> = ({ onOpenCheckout }) => {
           className="relative rounded-2xl sm:rounded-3xl p-2 sm:p-3 bg-gradient-to-b from-[#E8A838]/30 via-[#262626] to-[#E8A838]/20 border border-[#E8A838]/40 shadow-[0_0_50px_rgba(232,168,56,0.15)]"
         >
           <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-[#0A0A0A] shadow-2xl">
+            
+            {/* Custom Play Overlay */}
+            <AnimatePresence>
+              {!isPlaying ? (
+                <motion.div
+                  initial={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={handlePlay}
+                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/50 backdrop-blur-[6px] cursor-pointer group"
+                >
+                  {/* Elegant Play Button */}
+                  <div
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#E8A838]/30 bg-[#0A0A0A]/60 backdrop-blur-md flex items-center justify-center text-[#E8A838] transition-all duration-500 group-hover:scale-105 group-hover:border-[#E8A838] group-hover:bg-[#0A0A0A]/80 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+                    aria-label="Dar Play no Vídeo"
+                  >
+                    <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-[#E8A838] text-[#E8A838] ml-1" />
+                  </div>
+                  
+                  {/* Play CTA Text */}
+                  <span className="mt-4 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#C2C2C2] group-hover:text-white transition-colors duration-300">
+                    Assistir Apresentação
+                  </span>
+                </motion.div>
+              ) : (
+                /* Click to Pause Overlay over the playing video */
+                <div 
+                  onClick={handlePause}
+                  className="absolute inset-0 z-20 cursor-pointer"
+                  title="Clique para pausar"
+                />
+              )}
+            </AnimatePresence>
+
             <iframe
+              ref={iframeRef}
               src={vimeoEmbedUrl}
               className="w-full h-full border-0"
               allow="autoplay; fullscreen; picture-in-picture"

@@ -45,23 +45,6 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Urgency Top Bar */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-xl mx-auto mb-8 bg-[#141414] border border-[#E8A838]/40 rounded-2xl p-3 sm:p-4 text-center shadow-lg flex items-center justify-between"
-        >
-          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#FFD000]">
-            <Clock className="w-4 h-4 text-[#E8A838] animate-spin" style={{ animationDuration: '4s' }} />
-            <span>Condição Especial por Tempo Limitado:</span>
-          </div>
-          <div className="font-mono font-extrabold text-sm sm:text-base text-white bg-[#0A0A0A] px-3 py-1 rounded-lg border border-[#262626]">
-            {String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
-          </div>
-        </motion.div>
-
         {/* Main Offer Card Container */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.98, y: 20 }}
@@ -114,6 +97,17 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
               {/* Right Column: Pricing Box & CTA */}
               <div className="lg:col-span-5 bg-[#0A0A0A] border border-[#E8A838]/40 rounded-2xl p-4 sm:p-8 text-center space-y-3 sm:space-y-6 shadow-2xl relative max-w-sm lg:max-w-none mx-auto w-full">
                 
+                {/* Micro Timer inside pricing card - Prominent & Elegant Style */}
+                <div className="flex items-center justify-center gap-3 text-[11px] sm:text-xs font-bold text-[#FFD000] bg-[#1A1208] py-2 px-4 rounded-xl border border-[#E8A838] w-fit mx-auto mb-3 shadow-[0_0_20px_rgba(232,168,56,0.2)]">
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="w-4 h-4 text-[#FFD000] animate-spin" style={{ animationDuration: '6s' }} />
+                    <span className="tracking-wider uppercase font-extrabold">OFERTA EXPIRA EM:</span>
+                  </span>
+                  <span className="font-mono font-black text-white bg-[#0A0A0A] px-2.5 py-1 rounded-md border border-[#E8A838]/40 shadow-inner text-xs sm:text-sm tracking-widest min-w-[56px] text-center">
+                    {String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
+                  </span>
+                </div>
+
                 <div className="space-y-0.5 sm:space-y-1">
                   <p className="text-[11px] sm:text-xs text-[#9C7A5B] line-through uppercase tracking-wider font-medium">
                     De R$ 997,00
