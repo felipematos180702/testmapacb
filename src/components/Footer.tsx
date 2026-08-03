@@ -15,11 +15,6 @@ export const Footer: React.FC = () => {
           {/* Logo & Slogan */}
           <div className="text-center md:text-left space-y-2">
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E8A838] to-[#9C7A5B] p-[1px] flex items-center justify-center">
-                <div className="w-full h-full bg-[#0A0A0A] rounded-[7px] flex items-center justify-center">
-                  <span className="font-serif-title font-bold text-[#E8A838] text-xs">CB</span>
-                </div>
-              </div>
               <span className="font-serif-title font-extrabold text-xl text-white gold-gradient-text tracking-widest">
                 O MAPA CB
               </span>
@@ -39,15 +34,6 @@ export const Footer: React.FC = () => {
             >
               <Instagram className="w-4 h-4 text-[#E8A838]" />
               <span>@carlaborges</span>
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#141414] border border-[#262626] hover:border-[#E8A838] text-xs text-white hover:text-[#E8A838] transition-all"
-            >
-              <Instagram className="w-4 h-4 text-[#FFD000]" />
-              <span>@omapacb</span>
             </a>
           </div>
 
