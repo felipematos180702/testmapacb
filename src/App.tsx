@@ -15,7 +15,7 @@ export default function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
   const handleOpenCheckout = () => {
-    setIsCheckoutOpen(true);
+    window.location.href = "https://pay.kiwify.com.br/UCPczEQ?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnehNCBUP8DGjsn_RsaisVeQ4GNEIArsKqj_iaiuKVu8FeoVe4Ivv-MowuDSw_aem_1HxpkdP0BglnWuFfddA7pg&utm_id=97760_v0_s00_e0_tv3";
   };
 
   const handleCloseCheckout = () => {

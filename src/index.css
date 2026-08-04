@@ -80,6 +80,7 @@
   color: #0A0A0A;
   box-shadow: 0 0 20px rgba(232, 168, 56, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
 }
 
 .btn-gold-glow:hover {

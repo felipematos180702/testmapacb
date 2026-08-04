@@ -27,13 +27,13 @@ export const Footer: React.FC = () => {
           {/* Social Links */}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/carlaborgess2"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#141414] border border-[#262626] hover:border-[#E8A838] text-xs text-white hover:text-[#E8A838] transition-all"
             >
               <Instagram className="w-4 h-4 text-[#E8A838]" />
-              <span>@carlaborges</span>
+              <span>@carlaborgess2</span>
             </a>
           </div>
 

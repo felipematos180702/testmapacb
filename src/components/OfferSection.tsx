@@ -30,11 +30,12 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
   }, []);
 
   const features = [
-    "Comunidade Exclusiva de Alunas no Telegram / WhatsApp",
-    "Suporte Direto para Dúvidas Durante Toda a Sua Jornada",
-    "BÔNUS 1: Guia de Posicionamento Irresistível no Instagram",
-    "BÔNUS 2: Planilha de Gestão Financeira para Empreendedoras",
-    "BÔNUS 3: Scripts de Vendas Suaves para Direct & WhatsApp"
+    "Comunidade exclusiva de alunas no Telegram",
+    "Suporte direto para tirar suas dúvidas durante toda a sua jornada",
+    "Todas as atualizações e novidades do Mapa CB durante 1 ano",
+    "Acesso ao aplicativo exclusivo do Mapa CB assim que for lançado",
+    "Novas aulas bônus adicionadas durante o seu período de acesso",
+    "Aulas ao vivo exclusivas que acontecerem durante esse período"
   ];
 
   return (
@@ -110,7 +111,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
 
                 <div className="space-y-0.5 sm:space-y-1">
                   <p className="text-[11px] sm:text-xs text-[#9C7A5B] line-through uppercase tracking-wider font-medium">
-                    De R$ 997,00
+                    De R$ 799,00
                   </p>
                   <p className="text-[11px] sm:text-xs text-[#C2C2C2] font-medium">Por apenas 12x de</p>
                   <div className="flex items-baseline justify-center gap-1">
@@ -123,15 +124,14 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
                     ou <span className="text-white font-bold">R$ 198,00 à vista</span> no Pix ou Cartão
                   </p>
                 </div>
-
-                <button
-                  onClick={onOpenCheckout}
+                <a
+                  href="https://pay.kiwify.com.br/UCPczEQ?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnehNCBUP8DGjsn_RsaisVeQ4GNEIArsKqj_iaiuKVu8FeoVe4Ivv-MowuDSw_aem_1HxpkdP0BglnWuFfddA7pg&utm_id=97760_v0_s00_e0_tv3"
                   className="btn-gold-glow w-full max-w-[280px] sm:max-w-[320px] mx-auto py-2 sm:py-2.5 px-4 rounded-xl font-bold text-[11px] sm:text-xs tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-xl group"
                 >
                   <Zap className="w-3.5 h-3.5 text-[#0A0A0A] fill-[#0A0A0A]" />
                   <span>GARANTIR MINHA VAGA AGORA</span>
                   <ArrowRight className="w-3.5 h-3.5 text-[#0A0A0A] group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
 
                 <div className="flex items-center justify-center gap-3 text-[11px] text-[#9C7A5B] pt-1 sm:pt-2">
                   <span className="flex items-center gap-1">
