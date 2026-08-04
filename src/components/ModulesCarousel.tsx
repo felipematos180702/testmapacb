@@ -8,11 +8,14 @@ export const ModulesCarousel: React.FC = () => {
       <style>
         {`
           @keyframes infinite-scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
+            from { transform: translate3d(0, 0, 0); }
+            to { transform: translate3d(-100%, 0, 0); }
           }
           .animate-infinite-scroll {
             animation: infinite-scroll 50s linear infinite;
+            will-change: transform;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
           }
           .pause-animation {
             animation-play-state: paused;

@@ -92,7 +92,7 @@ export const FaqAccordion: React.FC = () => {
             </div>
           </div>
           <a
-            href="https://wa.me/?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20MAPA%20CB"
+            href="https://wa.me/5511958001373?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20MAPA%20CB"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-full bg-[#141414] border border-emerald-500/40 hover:border-emerald-500 text-emerald-400 hover:text-white text-xs font-bold transition-all flex items-center gap-2"

@@ -117,11 +117,11 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onOpenCheckout }) =>
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-lg sm:text-xl font-bold text-[#E8A838]">R$</span>
                     <span className="font-sans text-3xl sm:text-5xl font-extrabold text-white gold-gradient-text">
-                      20,48
+                      20,58
                     </span>
                   </div>
                   <p className="text-[11px] sm:text-xs text-[#C2C2C2] pt-0.5 sm:pt-1">
-                    ou <span className="text-white font-bold">R$ 198,00 à vista</span> no Pix ou Cartão
+                    ou <span className="text-white font-bold">R$ 199,00 à vista</span> no Pix ou Cartão
                   </p>
                 </div>
                 <a

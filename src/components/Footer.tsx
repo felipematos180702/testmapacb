@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Instagram, ArrowUp, ShieldCheck, Heart } from 'lucide-react';
+import { LegalModal } from './LegalModal';
 
 export const Footer: React.FC = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<'terms' | 'privacy'>('terms');
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const openModal = (type: 'terms' | 'privacy', e: React.MouseEvent) => {
+    e.preventDefault();
+    setModalType(type);
+    setModalOpen(true);
   };
 
   return (
@@ -55,13 +65,19 @@ export const Footer: React.FC = () => {
           </p>
           
           <div className="flex items-center gap-4 text-[11px]">
-            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
+            <a href="#" onClick={(e) => openModal('terms', e)} className="hover:text-white transition-colors cursor-pointer">Termos de Uso</a>
             <span>•</span>
-            <a href="#" className="hover:text-white transition-colors">Políticas de Privacidade</a>
+            <a href="#" onClick={(e) => openModal('privacy', e)} className="hover:text-white transition-colors cursor-pointer">Políticas de Privacidade</a>
           </div>
         </div>
 
       </div>
+
+      <LegalModal 
+        isOpen={modalOpen} 
+        onClose={() => setModalOpen(false)} 
+        type={modalType} 
+      />
     </footer>
   );
 };
